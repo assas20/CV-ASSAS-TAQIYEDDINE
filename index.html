@@ -352,6 +352,100 @@
             color: var(--text-dark);
         }
 
+        /* Social Links Section */
+        .social-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .social-links-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        body[lang="fr"] .social-links-title {
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+            background: #f8fafc;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        body[lang="fr"] .social-link {
+            flex-direction: row-reverse;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link.google-scholar:hover {
+            background: #4285f4;
+            color: white;
+            border-color: #4285f4;
+        }
+
+        .social-link.researchgate:hover {
+            background: #00ccbb;
+            color: white;
+            border-color: #00ccbb;
+        }
+
+        .social-link.linkedin:hover {
+            background: #0077b5;
+            color: white;
+            border-color: #0077b5;
+        }
+
+        .social-link.orcid:hover {
+            background: #a6ce39;
+            color: white;
+            border-color: #a6ce39;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+        }
+
+        .social-link:hover .social-icon {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .social-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         /* Skills */
         .skill-category {
             margin-bottom: 20px;
@@ -617,6 +711,7 @@
             margin-bottom: 20px;
             border-right: 4px solid var(--secondary-color);
             transition: all 0.3s ease;
+            position: relative;
         }
 
         body[lang="fr"] .publication-card {
@@ -667,6 +762,7 @@
             font-size: 0.85rem;
             color: var(--text-light);
             flex-wrap: wrap;
+            align-items: center;
         }
 
         body[lang="fr"] .pub-meta {
@@ -677,6 +773,26 @@
             display: flex;
             align-items: center;
             gap: 5px;
+        }
+
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .pdf-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
         }
 
         /* Conferences */
@@ -746,6 +862,26 @@
             justify-content: flex-start;
         }
 
+        .conf-pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .conf-pdf-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
         /* Books */
         .book-card {
             display: flex;
@@ -755,6 +891,7 @@
             border-radius: 15px;
             margin-bottom: 20px;
             border-right: 5px solid var(--accent-color);
+            position: relative;
         }
 
         body[lang="fr"] .book-card {
@@ -785,6 +922,26 @@
 
         body[lang="fr"] .book-info p {
             text-align: left;
+        }
+
+        .book-pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .book-pdf-link:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
         }
 
         /* Navigation Tabs */
@@ -957,6 +1114,10 @@
                 right: auto;
                 left: 10px;
             }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media print {
@@ -1030,7 +1191,7 @@
                         متخصص في تحليل المنشآت باستخدام طريقة العناصر المحدودة ومواد التدرج الوظيفي (FGM)
                     </p>
                     <p style="opacity: 0.9; margin-bottom: 20px;" data-lang="fr">
-                        Domaines de spécialité : Voies et Ouvrages d’Art | Analyse et Modélisation des Structures | Dynamique des Structures
+                        Domaines de spécialité : Voies et Ouvrages d'Art | Analyse et Modélisation des Structures | Dynamique des Structures
                     </p>
                     <div class="hero-stats">
                         <div class="stat-item">
@@ -1108,6 +1269,42 @@
                             <div class="info-value" data-lang="fr">Algérienne</div>
                         </div>
                     </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <h4 class="social-links-title" data-lang="ar">
+                            <i class="fas fa-share-alt"></i> الملفات الشخصية الأكاديمية
+                        </h4>
+                        <h4 class="social-links-title" data-lang="fr">
+                            <i class="fas fa-share-alt"></i> Profils Académiques
+                        </h4>
+                        <div class="social-grid">
+                            <a href="https://scholar.google.com/scholar?hl=fr&as_sdt=0%2C5&q=assas+taqiyeddine&oq=" target="_blank" class="social-link google-scholar">
+                                <div class="social-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <span class="social-text">Google Scholar</span>
+                            </a>
+                            <a href="https://www.researchgate.net/profile/Taqiyeddine-Assas" target="_blank" class="social-link researchgate">
+                                <div class="social-icon">
+                                    <i class="fab fa-researchgate"></i>
+                                </div>
+                                <span class="social-text">ResearchGate</span>
+                            </a>
+                            <a href="https://dz.linkedin.com/in/takieddine-assas-7bb73b149" target="_blank" class="social-link linkedin">
+                                <div class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <span class="social-text">LinkedIn</span>
+                            </a>
+                            <a href="https://orcid.org/0009-0001-4288-2908" target="_blank" class="social-link orcid">
+                                <div class="social-icon">
+                                    <i class="fab fa-orcid"></i>
+                                </div>
+                                <span class="social-text">ORCID</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Skills -->
@@ -1142,7 +1339,6 @@
                             <span class="skill-tag">C/C++</span>
                             <span class="skill-tag">Fortran</span>
                             <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Intelligence Artificielle (IA)</span>
                             <span class="skill-tag">Scientific Workplace</span>
                         </div>
                     </div>
@@ -1152,13 +1348,13 @@
                         <h4 data-lang="fr"><i class="fas fa-graduation-cap"></i> Spécialités</h4>
                         <div class="skill-tags" data-lang="ar">
                             <span class="skill-tag"> الطرق والمنشآت الفنية</span>
-                            <span class="skill-tag">  النمذجة العددية للهياكل (طريقة العناصر المحددة)</span>
+                            <span class="skill-tag">  النمذجة العددية للهياكل (طريقة العناصر المحدودة)</span>
                             <span class="skill-tag"> المواد المركبة والمواد متدرجة الخصائص (FGM)</span>
                             <span class="skill-tag"> ديناميك المنشآت</span>
                             <span class="skill-tag"> الميكانيك النانوية</span>
                         </div>
                         <div class="skill-tags" data-lang="fr">
-                            <span class="skill-tag"> Voies et Ouvrages d’Art</span>
+                            <span class="skill-tag"> Voies et Ouvrages d'Art</span>
                             <span class="skill-tag">Modélisation numérique des structures (MEF)</span>
                             <span class="skill-tag">Matériaux composites et FGM </span>
                             <span class="skill-tag">Dynamique des structures</span>
@@ -1239,14 +1435,6 @@
                         <li style="margin-bottom: 10px; padding: 10px; background: #f0f9ff; border-radius: 8px;">
                             <i class="fas fa-check" style="color: var(--secondary-color); margin-right: 8px;"></i>
                             Glissements de terrain et Stabilité des ouvrages
-                        </li>
-                        <li style="margin-bottom: 10px; padding: 10px; background: #f0f9ff; border-radius: 8px;">
-                            <i class="fas fa-check" style="color: var(--secondary-color); margin-right: 8px;"></i>
-                           Formation GeoMensura Genius 
-                        </li>
-                        <li style="margin-bottom: 10px; padding: 10px; background: #f0f9ff; border-radius: 8px;">
-                            <i class="fas fa-check" style="color: var(--secondary-color); margin-right: 8px;"></i>
-                           Formation logiciels civil 3d
                         </li>
                     </ul>
                 </div>
@@ -1382,7 +1570,7 @@
                                 <div class="timeline-dot"></div>
                                 <div class="timeline-content">
                                     <span class="timeline-date">Décembre 2018 - Mars 2024</span>
-                                    <h3 class="timeline-title">Chargé d’Études et de Suivi des Travaux VRD</h3>
+                                    <h3 class="timeline-title">Chargé d'Études et de Suivi des Travaux VRD</h3>
                                     <div class="timeline-subtitle">Bureau d'études et de réalisation en urbanisme URBA - Batna</div>
                                     <ul class="timeline-list">
                                         <li>2023/2024:Suivi des travaux VRD pour la zone industrielle d'Ain Yagout-Batna</li>
@@ -1551,6 +1739,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 0939-1533</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1007/s00419-024-02407-0</span>
                                 </div>
+                                <a href="pdfs/publication1.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1562,6 +1753,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 1539-7734</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1080/15397734.2024.2418828</span>
                                 </div>
+                                <a href="pdfs/publication2.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1573,6 +1767,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 1678-5878</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1007/s40430-025-05126-0</span>
                                 </div>
+                                <a href="pdfs/publication3.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1584,6 +1781,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 1537-6494</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1080/15376494.2025.2473687</span>
                                 </div>
+                                <a href="pdfs/publication4.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1595,6 +1795,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 2523-3920</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1007/s42417-024-01307-1</span>
                                 </div>
+                                <a href="pdfs/publication5.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1606,6 +1809,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 2631-8695</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1088/2631-8695/ae1082</span>
                                 </div>
+                                <a href="pdfs/publication6.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
                         </div>
 
@@ -1619,6 +1825,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 0939-1533</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1007/s00419-024-02407-0</span>
                                 </div>
+                                <a href="pdfs/publication1.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1630,6 +1839,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 1539-7734</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1080/15397734.2024.2418828</span>
                                 </div>
+                                <a href="pdfs/publication2.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1641,6 +1853,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 1678-5878</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1007/s40430-025-05126-0</span>
                                 </div>
+                                <a href="pdfs/publication3.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1652,6 +1867,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 1537-6494</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1080/15376494.2025.2473687</span>
                                 </div>
+                                <a href="pdfs/publication4.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1663,6 +1881,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 2523-3920</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1007/s42417-024-01307-1</span>
                                 </div>
+                                <a href="pdfs/publication5.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="publication-card">
@@ -1674,6 +1895,9 @@
                                     <span><i class="fas fa-barcode"></i> ISSN: 2631-8695</span>
                                     <span><i class="fas fa-link"></i> DOI: 10.1088/2631-8695/ae1082</span>
                                 </div>
+                                <a href="pdfs/publication6.pdf" target="_blank" class="pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1703,6 +1927,9 @@
                                 <h4 class="conf-title">1st International Conference on Materials Sciences and Applications (ICMSA2023)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> خنشلة، الجزائر</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">نمذجة عتبة من مادة مركبة متدرجة الوظيفة باستخدام طريقة العناصر المحدودة</p>
+                                <a href="pdfs/conference1.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1710,6 +1937,9 @@
                                 <h4 class="conf-title">First International Congress on Mechanical Engineering (ICME'23)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قسنطينة، الجزائر</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">الاهتزازات الحرة والانحرافات الساكنة للألواح FGM باستخدام منهجية الانفعال</p>
+                                <a href="pdfs/conference2.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1717,6 +1947,9 @@
                                 <h4 class="conf-title">4th International Conference on Engineering and Applied Natural Sciences (ICEANS)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قونيا، تركيا</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">صياغة العناصر المحدودة المبنية على الانفعال لتحليل السكون والاهتزاز الحر للألواح FGM</p>
+                                <a href="pdfs/conference3.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1724,6 +1957,9 @@
                                 <h4 class="conf-title">2nd International Conference on Frontiers in Academic Research (ICFAR)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قونيا، تركيا</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">السلوك السكوني للألواح FGM باستخدام صياغة العناصر المحدودة المبنية على الانفعال</p>
+                                <a href="pdfs/conference4.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1731,6 +1967,9 @@
                                 <h4 class="conf-title">6th International Conference on Engineering, Natural and Social Sciences</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قونيا، تركيا</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">تحليل العناصر المحدودة المبني على الانفعال للألواح الدائرية والمائلة FGM</p>
+                                <a href="pdfs/conference5.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1738,6 +1977,9 @@
                                 <h4 class="conf-title">8th International Conference on Applied Engineering and Natural Sciences (ICAENS)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قونيا، تركيا</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">صياغة العناصر المحدودة المبنية على الانفعال لتحليل ونمذجة المنشآت</p>
+                                <a href="pdfs/conference6.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1745,6 +1987,9 @@
                                 <h4 class="conf-title">2nd International Conference on Pioneer and Academic Research (ICPAR)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قونيا، تركيا</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">تحليل الالتواء للألواح FGM باستخدام نظرية تشوه القص عالي الرتبة</p>
+                                <a href="pdfs/conference7.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1752,6 +1997,9 @@
                                 <h4 class="conf-title">7th International Conference on Innovative Academic Studies (ICIAS)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> قونيا، تركيا</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">عنصر جديد مبني على الانفعال بأربع عقد مع دوران ثقب داخلي للألواح FGM</p>
+                                <a href="pdfs/conference8.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
                         </div>
 
@@ -1761,6 +2009,9 @@
                                 <h4 class="conf-title">1st International Conference on Materials Sciences and Applications (ICMSA2023)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Khenchela, Algérie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Modélisation d'une poutre en matériau composite à gradient fonctionnel par éléments finis</p>
+                                <a href="pdfs/conference1.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1768,6 +2019,9 @@
                                 <h4 class="conf-title">First International Congress on Mechanical Engineering (ICME'23)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Constantine, Algérie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Vibrations libres et déformations statiques des plaques FGM par approche basée sur les déformations</p>
+                                <a href="pdfs/conference2.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1775,6 +2029,9 @@
                                 <h4 class="conf-title">4th International Conference on Engineering and Applied Natural Sciences (ICEANS)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Konya, Turquie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Formulation éléments finis basée sur les déformations pour l'analyse statique et vibratoire des plaques FGM</p>
+                                <a href="pdfs/conference3.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1782,6 +2039,9 @@
                                 <h4 class="conf-title">2nd International Conference on Frontiers in Academic Research (ICFAR)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Konya, Turquie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Comportement statique des plaques FGM par formulation éléments finis basée sur les déformations</p>
+                                <a href="pdfs/conference4.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1789,6 +2049,9 @@
                                 <h4 class="conf-title">6th International Conference on Engineering, Natural and Social Sciences</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Konya, Turquie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Analyse éléments finis basée sur les déformations pour plaques circulaires et obliques FGM</p>
+                                <a href="pdfs/conference5.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1796,6 +2059,9 @@
                                 <h4 class="conf-title">8th International Conference on Applied Engineering and Natural Sciences (ICAENS)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Konya, Turquie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Formulation éléments finis basée sur les déformations pour l'analyse et modélisation des structures</p>
+                                <a href="pdfs/conference6.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1803,6 +2069,9 @@
                                 <h4 class="conf-title">2nd International Conference on Pioneer and Academic Research (ICPAR)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Konya, Turquie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Analyse de flambage des plaques FGM par méthodes basées sur les déformations et théorie HSDT</p>
+                                <a href="pdfs/conference7.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
@@ -1810,6 +2079,9 @@
                                 <h4 class="conf-title">7th International Conference on Innovative Academic Studies (ICIAS)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Konya, Turquie</div>
                                 <p style="margin-top: 10px; color: var(--text-dark);">Nouvel élément fini à 4 nœuds basé sur les déformations avec rotation de perçage pour plaques FGM</p>
+                                <a href="pdfs/conference8.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
                         </div>
 
@@ -1825,36 +2097,54 @@
                                 <span class="conf-date">نوفمبر 2023</span>
                                 <h4 class="conf-title">المؤتمر الوطني الأول للمواد والطاقات المتجددة</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> غليزان، الجزائر</div>
+                                <a href="pdfs/conference_nat1.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">ديسمبر 2023</span>
                                 <h4 class="conf-title">المؤتمر الوطني حول الميكانيك والمواد (NCMM'2023)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> بومرداس، الجزائر</div>
+                                <a href="pdfs/conference_nat2.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">أكتوبر 2023</span>
                                 <h4 class="conf-title">المؤتمر الوطني الثاني للعلوم التطبيقية والمواد المتقدمة</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> سكيكدة، الجزائر</div>
+                                <a href="pdfs/conference_nat3.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">أكتوبر 2025</span>
                                 <h4 class="conf-title">الندوة الوطنية الثالثة للهندسة المعمارية وهندسة المدن</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> تلمسان، الجزائر</div>
+                                <a href="pdfs/conference_nat4.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">نوفمبر 2025</span>
                                 <h4 class="conf-title">المؤتمر الوطني الثاني في الهندسة الميكانيكية (NCME'25)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> باتنة، الجزائر</div>
+                                <a href="pdfs/conference_nat5.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">ديسمبر 2025</span>
                                 <h4 class="conf-title">المؤتمر الوطني الأول للمواد الناشئة لتخزين وتحويل الطاقة</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> المركز البحثي في شبه الموصلات (CRTSE)</div>
+                                <a href="pdfs/conference_nat6.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> تحميل PDF
+                                </a>
                             </div>
                         </div>
 
@@ -1863,36 +2153,54 @@
                                 <span class="conf-date">Novembre 2023</span>
                                 <h4 class="conf-title">1ère Conférence Nationale sur les Sciences des Matériaux et les Énergies Renouvelables</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Relizane, Algérie</div>
+                                <a href="pdfs/conference_nat1.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">Décembre 2023</span>
                                 <h4 class="conf-title">Conférence Nationale sur la Mécanique et les Matériaux (NCMM'2023)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Boumerdès, Algérie</div>
+                                <a href="pdfs/conference_nat2.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">Octobre 2023</span>
                                 <h4 class="conf-title">2ème Conférence Nationale sur les Sciences Appliquées et Matériaux Avancés</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Skikda, Algérie</div>
+                                <a href="pdfs/conference_nat3.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">Octobre 2025</span>
                                 <h4 class="conf-title">3ème Séminaire National Architecture et Ingénierie des Villes</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Tlemcen, Algérie</div>
+                                <a href="pdfs/conference_nat4.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">Novembre 2025</span>
                                 <h4 class="conf-title">2ème Conférence Nationale sur le Génie Mécanique (NCME'25)</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> Batna, Algérie</div>
+                                <a href="pdfs/conference_nat5.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
 
                             <div class="conference-card">
                                 <span class="conf-date">Décembre 2025</span>
                                 <h4 class="conf-title">1ère Conférence Nationale sur les Matériaux Émergents pour le Stockage et la Conversion de l'Énergie</h4>
                                 <div class="conf-location"><i class="fas fa-map-marker-alt"></i> CRTSE, Algérie</div>
+                                <a href="pdfs/conference_nat6.pdf" target="_blank" class="conf-pdf-link">
+                                    <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1922,6 +2230,9 @@
                                     <p style="margin-top: 10px; color: var(--text-dark);">
                                         كتاب علمي شامل في نمذجة المنشآت المركبة باستخدام طريقة العناصر المحدودة
                                     </p>
+                                    <a href="pdfs/book1.pdf" target="_blank" class="book-pdf-link">
+                                        <i class="fas fa-file-pdf"></i> تحميل PDF
+                                    </a>
                                 </div>
                             </div>
 
@@ -1937,6 +2248,9 @@
                                     <p style="margin-top: 10px; color: var(--text-dark);">
                                         تقنيات مبتكرة لأساسات الطرق: الإسفلت عالي المعامل (EME) والبيتون الإسفلتي عالي المعامل (BBME)
                                     </p>
+                                    <a href="pdfs/book2.pdf" target="_blank" class="book-pdf-link">
+                                        <i class="fas fa-file-pdf"></i> تحميل PDF
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1954,6 +2268,9 @@
                                     <p style="margin-top: 10px; color: var(--text-dark);">
                                         Ouvrage scientifique complet sur la modélisation des structures composites par la méthode des éléments finis
                                     </p>
+                                    <a href="pdfs/book1.pdf" target="_blank" class="book-pdf-link">
+                                        <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                    </a>
                                 </div>
                             </div>
 
@@ -1969,6 +2286,9 @@
                                     <p style="margin-top: 10px; color: var(--text-dark);">
                                         Techniques innovantes pour les assises des chaussées: Enrobés à Module Élevé (EME) et Béton Bitumineux à Module Élevé (BBME)
                                     </p>
+                                    <a href="pdfs/book2.pdf" target="_blank" class="book-pdf-link">
+                                        <i class="fas fa-file-pdf"></i> Télécharger PDF
+                                    </a>
                                 </div>
                             </div>
                         </div>
